@@ -1,0 +1,84 @@
+:root{
+  --backgroundColor: #fcf9ea;
+  --mainColor: #49beb7;
+  --lightMainColor: #badfdb;
+  --accentColor: #ff8a5c;
+}
+
+body{
+  background-color: var(--backgroundColor);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#navbar{
+  background-color: var(--mainColor);
+  margin-bottom: 2em;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  margin: auto;
+  height: 50%;
+  padding: 1em;
+}
+
+.box{
+  padding: 1em;
+}
+
+#inputBox{
+  grid-column-start:1;
+  grid-column-end:3;
+  background-color: var(--mainColor);
+}
+
+#outputBox{
+  grid-column-start:3;
+  grid-column-end:5;
+  background-color: var(--accentColor);
+}
+
+#wordsBox{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: var(--lightMainColor);
+  text-align: center;
+  display: grid;
+}
+
+.form-cont{
+  padding-bottom: 0px !important;
+}
+
+.word-cont{
+  margin-top: 1em;
+  grid-column: 2 / span 1;
+}
+
+textarea{
+  /* width: 99%; */
+  /* margin: auto; */
+  height: 9em !important;
+  resize: vertical;
+}
+
+.under{
+  height: 3em;
+  text-align: center;
+  vertical-align: middle;
+  background-color:gainsboro;
+  border: 2px solid lightgray;
+  margin-top: 3px;
+  grid-row-start: auto;
+  grid-row-end: auto;
+}

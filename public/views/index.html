@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css">
+</head>
+<body>
+<!-- jQuery -->
+<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Load React. -->
+<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+<!-- Load our React component. -->
+<!-- <script src="like_button.js"></script> -->
+
+<div>
+
+    <h1>hello</h1>
+
+    <div id="like_button_container"></div>
+
+</div>
+
+<div id="main-container">
+
+    <div class="box" id="inputBox">
+        <h3>In</h3>
+        <div>
+            <textarea id="in">
+
+            </textarea>
+        </div>
+        <div class="under">
+
+        </div>
+        <div class="under">
+
+        </div>
+
+    </div>
+
+    <div class="box" id="outputBox">
+        <h3>Out</h3>
+        <div>
+            <textarea id="out">
+
+            </textarea>
+        </div>
+        <div class="under">
+
+        </div>
+        <div class="under">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Script -->
+<script type="text\babel" src="public/javascripts/script.js"></script>
+
+<script>
+
+    /* Document Ready */
+    $(document).ready(()=>{
+
+        /* Submitting data on Enter keypress */
+        $("#in").keypress(function (e) {
+            if(e.which == 13 && !e.shiftKey ) {
+
+                let inputData = $(this).val();
+                sendData( inputData );
+                e.preventDefault();
+            }
+        });
+    })
+    /* End Document Ready */
+
+    const sendData = function(data){
+        console.log(data);
+    }
+
+
+</script>
+<!-- End Scripts -->
+</body>
+
+</html>
+
+
+
+
